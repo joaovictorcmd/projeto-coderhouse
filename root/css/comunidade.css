@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left , white, rgb(201, 200, 200));
 
     display: grid;
     grid-template-areas: 'nav header''nav main''nav footer';
