@@ -2,13 +2,18 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <link rel="shortcut icon" href="img/favicon.PNG">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/integrantes.css">
-    <script src="https://kit.fontawesome.com/7a044dc0c5.js" crossorigin="anonymous"></script>
     <title>Integrantes | aespa</title>
 </head>
 
@@ -39,68 +44,81 @@
             </li>
         </ul>
     </nav>
+
     <main>
-        <section>
-            <div class="image">
-                <img src="img/integrantes/karina-profile.png" alt="Ningning | aespa">
-            </div>
-            <div class="caption">
-                <h2>Karina</h2>
-                <p>
-                    Nome: 카리나
-                    <br>
-                    Nascimento: 11.04.2000 (22 anos)
-                    <br>
-                    Posição: Leader, Dancer, Rapper, Vocalist
-                </p>
-            </div>
+
+        <section class="d-flex justify-content-center align-items-center">
+
+            <article class="card" style="width: 18rem;">
+                <img src="img/integrantes/karina-profile.png" class="card-img-top" alt="Karina, integrante do aespa">
+                <div class="card-body">
+                    <h2 class="card-title">Karina</h2>
+                    <p class="card-text">
+                        Nome: 카리나
+                        <br>
+                        Nascimento: 11.04.2000
+                        <br>
+                        Posição: Leader, Dancer, Rapper, Vocalist
+                    </p>
+                    <a href="https://youtu.be/Hcu-Nr3wdGw" target="_blank" class="btn btn-light">SYNK, KARINA</a>
+                </div>
+            </article>
+
+            <article class="card" style="width: 18rem;">
+                <img src="img/integrantes/ningning-profile.png" class="card-img-top"
+                    alt="Ningning, integrante do aespa">
+                <div class="card-body">
+                    <h2 class="card-title">Ningning</h2>
+                    <p class="card-text">
+                        Nome: 닝닝
+                        <br>
+                        Nascimento: 23.10.2002
+                        <br>
+                        Posição: Vocalista, Maknae Lorem ipsum dolor
+                    </p>
+                    <a href="https://youtu.be/bONr7tZ7VIU" target="_blank" class="btn btn-light">SYNK, NINGNING</a>
+                </div>
+            </article>
+
         </section>
-        <section>
-            <div class="image">
-                <img src="img/integrantes/ningning-profile.png" alt="Ningning | aespa">
-            </div>
-            <div class="caption">
-                <h2>Ningning</h2>
-                <p>
-                    Nome: 닝닝
-                    <br>
-                    Nascimento: 23.10.2002 (20 anos)
-                    <br>
-                    Posição: Vocalista, Maknae
-                </p>
-            </div>
+
+        <section class="d-flex justify-content-center align-items-center">
+
+            <article class="card" style="width: 18rem;">
+                <img src="img/integrantes/giselle-profile.png" class="card-img-top" alt="Giselle, integrante do aespa">
+                <div class="card-body">
+                    <h2 class="card-title">Giselle</h2>
+                    <p class="card-text">
+                        Nome: 지젤
+                        <br>
+                        Nascimento: 23.10.2002
+                        <br>
+                        Posição: Vocalista, Rapper
+                    </p>
+                    <a href="https://youtu.be/pBvw2_e8Ws8" target="_blank" class="btn btn-light">SYNK, GISELLE</a>
+                </div>
+            </article>
+
+            <article class="card" style="width: 18rem;">
+                <img src="img/integrantes/winter-profile.png" class="card-img-top" alt="Winter, integrante do aespa">
+                <div class="card-body">
+                    <h2 class="card-title">Winter</h2>
+                    <p class="card-text">
+                        Nome: 김민정
+                        <br>
+                        Nascimento: 01.01.2001
+                        <br>
+                        Posição: Vocalista, Dancer
+                    </p>
+                    <a href="https://youtu.be/pBvw2_e8Ws8" target="_blank" class="btn btn-light">SYNK, WINTER</a>
+                </div>
+            </article>
+
         </section>
-        <section>
-            <div class="image">
-                <img src="img/integrantes/giselle-profile.png" alt="Ningning | aespa">
-            </div>
-            <div class="caption">
-                <h2>Giselle</h2>
-                <p>
-                    Nome: 지젤
-                    <br>
-                    Nascimento: 23.10.2002 (20 anos)
-                    <br>
-                    Posição: Vocalista, Rapper
-                </p>
-            </div>
-        </section>
-        <section>
-            <div class="image">
-                <img src="img/integrantes/winter-profile.png" alt="Ningning | aespa">
-            </div>
-            <div class="caption">
-                <h2>Winter (윈터)</h2>
-                <p>
-                    Nome: Kim Min-jeong (김민정)
-                    <br>
-                    Nascimento: 01.01.2001 (21 anos)
-                    <br>
-                    Posição: Vocalista, Dancer
-                </p>
-            </div>
-        </section>
+
     </main>
+
+
     <footer>
         <ul>
             <li>
@@ -147,6 +165,16 @@
             </li>
         </ul>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7a044dc0c5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
