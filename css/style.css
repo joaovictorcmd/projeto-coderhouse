@@ -1,116 +1,271 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css');
+
+:root {
+    --color1: #000000;
+    --color2: #0D0F1B;
+    --color3: #314265;
+    --color4: #E7D8FF;
+    --color5: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color1);
+    color: var(--color5);
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    cursor: pointer;
+    text-transform: lowercase;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.8em;
+}
+
+.logo a:hover {
+    color: white;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('../img/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('../img/close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
 }
 
-nav {
-    grid-area: nav;
-
-    width: 10%;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    position: fixed;
-    z-index: 3;
-    overflow: hidden;
+    background: var(--color1);
+    opacity: 0.1;
 }
 
-nav ul li a {
-    display: block;
-    padding: 20% 10%;
-    
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
+.release {
+    position: relative;
+    z-index: 10;
+}
+
+.release .release-title {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 5em;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
-nav :hover {
-    color:black;
+.release .release-subtitle {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 3em;
+    font-weight: 200;
 }
 
-nav ul li :hover {
-    background-color: white;
+.release a {
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     transition: 0.2s;
 }
 
-body main .album_name {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.release a:hover {
+    letter-spacing: 6px;
+}
+
+footer {
     position: absolute;
-    top: 35vh;
-    right: 0;
-    margin: 2%;
-}
-
-body main .album_name a {
-    color: white;
-    text-decoration: none;
-}
-
-body main .album_name #album_name--title {
-    font-size: 70px;
-    font-weight: 700;
-}
-
-body main .main_album_name #album_name--subtitle {
-    font-size: 50px;
-    font-weight: 500;
-}
-
-body main #bg_video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
+    bottom: 0;
     left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-body footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: 3;
-    right: 0;
-    bottom: 0;
-    width: 90%;
-}
-
-body footer ul {
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social {
+    bottom: 20px;
+    z-index: 10;
+}
+
+.social ul {
+    display: flex;
+    justify-content: end;
     align-items: center;
 }
 
-body footer ul li {
-    align-items: center;
-    padding: 1%
+.social li {
+    list-style: none;
 }
 
-footer ul :hover {
-    transform: scale(1.1);
+.social li a {
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px;
+    transform: scale(0.5);
     transition: 0.5s;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
 }
 
-.fa-brands {
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
+.social li a:hover {
+    transform: scale(0.6) translateY(-15px);
 }
 
-.fa-basket-shopping {
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
+.text p {
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+}
+
+.text p a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1em;
+}
+
+.text p a:hover {
+    color: white;
+    font-weight: 600;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li {
+
+}
+
+.menu ul li a {
+    display: block;
+    width: 300px;
+    height: 50px;
+    padding-bottom: 90px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    line-height: 90px;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.menu ul li a:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+@media (max-width: 798px) {
+
+    .showcase,
+    .showcase header {
+        padding: 20px;
+    }
+
+    .release-title {
+        font-size: 2.5em;
+    }
+
+    .release-subtitle {
+        font-size: 1.5em;
+    }
+
+    .release a {
+        font-size: 0.4em;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
