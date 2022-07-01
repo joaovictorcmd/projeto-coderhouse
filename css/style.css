@@ -211,10 +211,6 @@ footer {
     list-style: none;
 }
 
-.menu ul li {
-
-}
-
 .menu ul li a {
     display: block;
     width: 300px;
@@ -225,6 +221,7 @@ footer {
     color: black;
     text-align: center;
     line-height: 90px;
+    transition: 0.2s;
 }
 
 .menu ul li a:hover {
