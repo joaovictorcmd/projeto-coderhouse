@@ -3,10 +3,7 @@
 
 :root {
     --color1: #000000;
-    --color2: #0D0F1B;
-    --color3: #314265;
-    --color4: #E7D8FF;
-    --color5: #FFFFFF;
+    --color2: #FFFFFF;
 }
 
 * {
@@ -26,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--color1);
-    color: var(--color5);
+    color: var(--color2);
     z-index: 2;
     transition: 0.5s;
 }
@@ -35,7 +32,27 @@
     right: 300px;
 }
 
-.showcase header {
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color1);
+    opacity: 0.1;
+}
+
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,16 +68,13 @@
     cursor: pointer;
     text-transform: lowercase;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-}
-
-.logo a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.8em;
 }
 
-.logo a:hover {
-    color: white;
+.logo:hover {
+    color: var(--color2);
 }
 
 .toggle {
@@ -79,26 +93,6 @@
     background-repeat: no-repeat;
     background-size: 25px;
     background-position: center;
-}
-
-.showcase video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--color1);
-    opacity: 0.1;
 }
 
 .release {
@@ -123,10 +117,10 @@
     display: inline-block;
     border-radius: 5px;
     font-size: 1em;
-    background: #fff;
+    background: var(--color2);
     padding: 10px 30px;
     text-decoration: none;
-    color: black;
+    color: var(--color1);
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -180,18 +174,18 @@ footer {
 
 .text p {
     font-weight: 100;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.7em;
 }
 
 .text p a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 1em;
 }
 
 .text p a:hover {
-    color: white;
+    color: var(--color2);
     font-weight: 600;
 }
 
@@ -218,7 +212,7 @@ footer {
     padding-bottom: 90px;
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: var(--color1);
     text-align: center;
     line-height: 90px;
     transition: 0.2s;
@@ -226,12 +220,11 @@ footer {
 
 .menu ul li a:hover {
     background-color: rgba(0, 0, 0, 0.2);
-    color: white;
+    color: var(--color2);
 }
 
 .menu ul li a:active {
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
 }
 
 @media (max-width: 798px) {
@@ -250,7 +243,7 @@ footer {
     }
 
     .release a {
-        font-size: 0.4em;
+        font-size: 0.5em;
     }
 
     footer {
