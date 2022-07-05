@@ -48,11 +48,16 @@ header {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     text-decoration: none;
     color: rgba(0, 0, 0, 0.8);
-    font-size: 1em;
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 .logo:hover {
     color: var(--color1);
+}
+
+.logo:active {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .toggle {
@@ -82,11 +87,12 @@ header {
 
 #galeria img {
     width: 100%;
-    transition: 0.5s;
+    transition: 1s;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.05);
 }
 
 #galeria img:hover {
-    
+    transform: scale(1.5);
     cursor: pointer;
 }
 

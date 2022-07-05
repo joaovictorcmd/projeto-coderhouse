@@ -77,6 +77,10 @@ header {
     color: var(--color2);
 }
 
+.logo:active {
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .toggle {
     position: relative;
     width: 60px;
