@@ -1,8 +1,5 @@
 @import 'reset.scss';
 
-$color1: #000000;
-$color2: #FFFFFF;
-
 .showcase {
     position: absolute;
     right: 0;
@@ -12,8 +9,8 @@ $color2: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $color1;
-    color: $color2;
+    background-color: map-get($color2, first);
+    color: map-get($color1, first);
     z-index: 2;
     transition: 0.5s;
 
@@ -33,7 +30,7 @@ $color2: #FFFFFF;
         left: 0;
         width: 100%;
         height: 100%;
-        background: $color1;
+        background: map-get($color2, first);
         opacity: 0.1;
     }
 
@@ -49,20 +46,7 @@ $color2: #FFFFFF;
         justify-content: space-between;
 
         .logo {
-            cursor: pointer;
-            text-transform: lowercase;
-            font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-            text-decoration: none;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.8em;
-        }
-
-        &:hover {
-            color: $color2;
-        }
-
-        &:active {
-            color: rgba(255, 255, 255, 0.9);
+            @extend .logo
         }
 
         .toggle {
@@ -74,6 +58,13 @@ $color2: #FFFFFF;
             background-size: 30px;
             background-position: center;
             cursor: pointer;
+        }
+
+        .toggle.active {
+            background: url('../img/close.png');
+            background-repeat: no-repeat;
+            background-size: 25px;
+            background-position: center;
         }
     }
 
@@ -98,10 +89,10 @@ $color2: #FFFFFF;
             display: inline-block;
             border-radius: 5px;
             font-size: 1em;
-            background: $color2;
+            background: map-get($color1, first);
             padding: 10px 30px;
             text-decoration: none;
-            color: $color1;
+            color: map-get($color2, first);
             margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -138,7 +129,7 @@ $color2: #FFFFFF;
 
                     a {
                         display: inline-block;
-                        color: white;
+                        color: map-get($color1, first);
                         text-transform: uppercase;
                         text-decoration: none;
                         margin-right: 20px;
@@ -155,16 +146,16 @@ $color2: #FFFFFF;
 
         .text p {
             font-weight: 100;
-            color: rgba(255, 255, 255, 0.5);
+            color: map-get($color1, third);
             font-size: 0.7em;
 
             a {
                 text-decoration: none;
-                color: rgba(255, 255, 255, 0.5);
+                color: map-get($color1, third);
                 font-size: 1em;
 
                 &:hover {
-                    color: $color2;
+                    color: map-get($color1, first);
                     font-weight: 600;
                 }
             }
@@ -195,18 +186,18 @@ $color2: #FFFFFF;
                 padding-bottom: 90px;
                 text-decoration: none;
                 font-size: 1.2em;
-                color: $color1;
+                color: map-get($color2, first);
                 text-align: center;
                 line-height: 90px;
                 transition: 0.2s;
 
                 &:hover {
-                    background-color: rgba(0, 0, 0, 0.2);
-                    color: $color2;
+                    background-color: map-get($color2, third);
+                    color: map-get($color1, first);
                 }
 
                 &:active {
-                    background-color: rgba(0, 0, 0, 0.5);
+                    background-color: map-get($color2, second);
                 }
             }
         }
@@ -215,13 +206,6 @@ $color2: #FFFFFF;
 
 .showcase.active {
     right: 300px;
-}
-
-.toggle.active {
-    background: url('../img/close.png');
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: center;
 }
 
 @media (max-width: 798px) {
