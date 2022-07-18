@@ -2,98 +2,37 @@
 <html lang="pt-br">
 
 <head>
+    <title>Vídeos | aespa</title>
+    <link rel="shortcut icon" href="img/favicon.PNG">
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.PNG">
-
+    <!-- Meta Tags / SEO -->
+    <meta name="description" content="Vídeos - aespa  Site Oficial do aespa.">
+    <meta name="keywords" content="aespa, vídeos aespa, MV, music video aespa, kpop, girl group, korean singers">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CSS -->
     <link rel="stylesheet" href="css/videos.css">
-    <title>Vídeos | aespa</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-
-
-    <div class="showcase">
-
-        <header>
-            <h1>
-                <a class="logo" href="index.html">aespa</a>
-            </h1>
-            <button class="toggle"></button>
-        </header>
-
-        <div class="text-center pt-5">
-            <h1>VÍDEOS</h1>
-        </div>
-
-        <main>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/z2ZjutyxmjA"
-                    title="YouTube video player"></iframe>
-            </div>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/WPdWvnAAurg"
-                    title="YouTube video player"></iframe>
-            </div>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4TWR90KJl84"
-                    title="YouTube video player"></iframe>
-            </div>
-            <div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wog1R1d4zls"
-                    title="YouTube video player"
-                    ></iframe>
-            </div>
-        </main>
-
-        <footer>
-            <section class="social">
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/aespa_official" target="_blank">
-                            <img src="img/social-icons/instagram.png" alt="Instagram, @aespa_official">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/aespa_Official" target="_blank">
-                            <img src="img/social-icons/twitter.png" alt="Twitter, @aespa_official">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.tiktok.com/@aespa_official" target="_blank">
-                            <img src="img/social-icons/tiktok.png" alt="Tiktok, @aespa_official">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/aespa.official" target="_blank">
-                            <img src="img/social-icons/facebook.png" alt="Facebook, aespa.official">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/c/aespa" target="_blank">
-                            <img src="img/social-icons/youtube.png" alt="Youtube, aespa">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://smglobalshop.com/collections/aespa" target="_blank">
-                            <img src="img/social-icons/shop.png" alt="SM GLOBAL SHOP - AESPA COLLECTION">
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="text">
-                <p>
-                    Site criado por
-                    <a href="https://github.com/joaovictorcmd" target="_blank">João Victor Carvalho Machado</a>
-                    para
-                    <a href="https://www.coderhouse.com.br/" target="_blank">CODERHOUSE</a>
-                </p>
-            </section>
-        </footer>
-    </div>
-
+    <header class="header">
+        <a href="index.html" class="header-brand">aespa</a>
+        <h1>VÍDEOS</h1>
+        <button class="header-button"></button>
+    </header>
+    
     <nav class="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -101,19 +40,98 @@
             <li><a href="discografia.html">Discografia</a></li>
             <li><a href="videos.html">Vídeos</a></li>
             <li><a href="fotos.html">Fotos</a></li>
-            <li><a href="comunidade.html">#MY</a></li>
         </ul>
     </nav>
 
-    <script>
-        const menuToggle = document.querySelector('.toggle')
-        const showcase = document.querySelector('.showcase')
+    <main>
+        <div class="gallery">
+            <div class="gallery-card" id="card-1">
+                <h2 class="gallery-card-title">Girls</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dYRITmpFbJ4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-card" id="card-2">
+                <h2 class="gallery-card-title">Life's Too Short</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/z2ZjutyxmjA"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-card" id="card-3">
+                <h2 class="gallery-card-title">Savage</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WPdWvnAAurg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-card" id="card-4">
+                <h2 class="gallery-card-title">Next Level</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4TWR90KJl84"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-card" id="card-5">
+                <h2 class="gallery-card-title">Forever (약속)</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wog1R1d4zls"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="gallery-card" id="card-6">
+                <h2 class="gallery-card-title">Black Mamba</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZeerrnuLi5E"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
 
-        menuToggle.addEventListener('click', function () {
-            menuToggle.classList.toggle('active')
-            showcase.classList.toggle('active')
-        })
-    </script>
+    <footer class="footer">
+        <div class="footer-social-media">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/aespa_official" target="_blank">
+                        <img src="img/social-icons/instagram.png" alt="Instagram, @aespa_official">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/aespa_Official" target="_blank">
+                        <img src="img/social-icons/twitter.png" alt="Twitter, @aespa_official">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@aespa_official" target="_blank">
+                        <img src="img/social-icons/tiktok.png" alt="Tiktok, @aespa_official">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/aespa.official" target="_blank">
+                        <img src="img/social-icons/facebook.png" alt="Facebook, aespa.official">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/c/aespa" target="_blank">
+                        <img src="img/social-icons/youtube.png" alt="Youtube, aespa">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smglobalshop.com/collections/aespa" target="_blank">
+                        <img src="img/social-icons/shop.png" alt="SM GLOBAL SHOP - AESPA COLLECTION">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>
+            Site criado por
+            <a href="https://github.com/joaovictorcmd" target="_blank">João Victor Carvalho Machado</a>
+            para
+            <a href="https://www.coderhouse.com.br/" target="_blank">CODERHOUSE</a>
+        </p>
+    </footer>
 </body>
 
 </html>

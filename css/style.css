@@ -1,18 +1,235 @@
-/* Error: Undefined variable.
- *    ,
- * 31 |     color: map-get($color-white, second);
- *    |                    ^^^^^^^^^^^^
- *    '
- *   reset.scss 31:20  @import
- *   style.scss 1:9    root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 31 \2502      color: map-get($color-white, second);\d\a    \2502                     ^^^^^^^^^^^^\a    \2575 \a   reset.scss 31:20  @import\a   style.scss 1:9    root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
+
+.logo, .showcase header .logo {
+  cursor: pointer;
+  text-transform: lowercase;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.8em;
+}
+.logo:hover, .showcase header .logo:hover {
+  color: rgb(255, 255, 255);
+}
+.logo:active, .showcase header .logo:active {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  transition: 0.5s;
+}
+.showcase .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.showcase .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 0.1;
+}
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showcase header .toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url("../img/menu.png");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.showcase header .toggle.active {
+  background: url("../img/close.png");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+}
+.showcase .release {
+  position: relative;
+  z-index: 10;
+}
+.showcase .release .release-title {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 5em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.showcase .release .release-subtitle {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 3em;
+  font-weight: 200;
+}
+.showcase .release a {
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 1em;
+  background: rgb(255, 255, 255);
+  padding: 10px 30px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.showcase .release a:hover {
+  letter-spacing: 6px;
+}
+.showcase footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.showcase footer .social {
+  bottom: 20px;
+  z-index: 10;
+}
+.showcase footer .social ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.showcase footer .social ul li {
+  list-style: none;
+}
+.showcase footer .social ul li a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.showcase footer .social ul li a:hover {
+  transform: scale(0.6) translateY(-15px);
+}
+.showcase footer .text p {
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7em;
+}
+.showcase footer .text p a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1em;
+}
+.showcase footer .text p a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+.menu ul li a {
+  display: block;
+  width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+  padding-bottom: 90px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 90px;
+  transition: 0.2s;
+}
+.menu ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+}
+.menu ul li a:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+@media (max-width: 798px) {
+  .showcase,
+.showcase header {
+    padding: 20px;
+  }
+  .release-title {
+    font-size: 2.5em;
+  }
+  .release-subtitle {
+    font-size: 1.5em;
+  }
+  .release a {
+    font-size: 0.5em;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

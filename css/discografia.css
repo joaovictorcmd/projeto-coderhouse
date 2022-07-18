@@ -1,150 +1,195 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to left , white, rgb(201, 200, 200));
-
-    display: grid;
-    grid-template-areas: 'nav header''nav main''nav footer';
-    grid-template-columns: 10% auto;
-    grid-template-rows: 10% auto 7%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
 }
 
-body nav {
-    grid-area: nav;
-
-    width: 10%;
-    height: 100%;
-    background-color: black;
-
-    position: fixed;
-    overflow: hidden;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  margin: 10px 100px;
+  font-size: 1.2rem;
+}
+@media (max-width: 798px) {
+  .header {
+    padding: 1rem;
+    font-size: 1rem;
+    align-items: center;
+    margin: 0;
+  }
+}
+.header-brand {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  transition: 0.1s;
+}
+@media (max-width: 798px) {
+  .header-brand {
+    font-size: 1rem;
+  }
+}
+.header-brand:hover {
+  color: rgb(0, 0, 0);
+}
+.header-button {
+  width: 60px;
+  height: 60px;
+  background: url("../img/menu.png");
+  filter: invert(100%);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
 }
 
-body nav ul li a {
-    display: block;
-    padding: 20% 10%;
-
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+.menu ul {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding-left: 0;
+}
+.menu ul li {
+  width: 20%;
+  text-align: center;
+  transition: 0.2s;
+}
+.menu ul li:hover {
+  letter-spacing: 2px;
+  background-color: black;
+}
+.menu ul li a {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  line-height: 50px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.menu ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 798px) {
+  .menu ul li a {
+    font-size: 0.8rem;
+  }
 }
 
-nav :hover {
-    color:black;
+.main .card {
+  width: 400px !important;
+  height: 800px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 0.5px solid #ffffff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1019607843);
+}
+@media (max-width: 798px) {
+  .main .card {
+    height: auto;
+  }
+}
+.main .card a img {
+  transition: 0.3s;
+}
+.main .card a img:hover {
+  transform: scale(1.1);
+}
+.main .card a img:active {
+  transform: scale(0.9);
+}
+.main .card .card-body a {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.main .card .card-body a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.main .card .card-body h5 {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.main .card .card-body p {
+  display: block;
+  text-align: justify;
+  line-height: 32px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.main .card .card-body p span {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
 }
 
-nav ul li :hover {
-    background-color: white;
-    transition: 0.3s;
+.footer {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 10px 100px;
+  padding: 100px 40px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
 }
-
-body header {
-    grid-area: header;
-
-    margin: 1%;
-    border: 6px solid rgba(0, 0, 0, 0.02);
-
-    display: flex;
+@media (max-width: 798px) {
+  .footer {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+.footer ul {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+.footer ul li a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
+  filter: invert(100%);
+}
+.footer ul li a:hover {
+  transform: scale(0.6) translateY(-15px);
+}
+.footer p {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  line-height: 50px;
+  transition: 1s;
+}
+.footer p a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer p a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 
-body header h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: black;
-}
-
-body main {
-    grid-area: main;
-
-    display: flex;
-    flex-direction: column;
-
-    margin: 0 1%;
-    border: 6px solid rgba(0, 0, 0, 0.02);
-    border-bottom: 0;
-}
-
-body main section {
-    display: flex;
-
-    padding: 1%;
-    border: 6px solid rgba(0, 0, 0, 0.02);
-}
-
-body main section .album_img {
-    width: 50%;
-    display: flex;
-    justify-content: end;
-    padding-right: 2%;
-}
-
-body main section .album_tracks {
-    width: 50%;
-
-    color: black;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: end;
-}
-
-body main section .album_tracks h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-body main section .album_tracks p {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-footer {
-    grid-area: footer;
-    margin: 1%;
-}
-
-footer ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border: 6px solid rgba(0, 0, 0, 0.02);
-}
-
-body footer ul li {
-    align-items: center;
-    padding: 1%;
-}
-
-footer ul li a {
-    color: black;
-}
-
-footer ul :hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-    color: white;
-    background-color: black;
-}
-
-.fa-brands {
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
-}
-
-.fa-basket-shopping {
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
-}
+/*# sourceMappingURL=discografia.css.map */

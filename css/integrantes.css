@@ -1,122 +1,173 @@
-body {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to left , white, rgb(201, 200, 200));
-
-    display: grid;
-    grid-template-areas: 'nav header''nav main''nav footer';
-    grid-template-columns: 10% auto;
-    grid-template-rows: 10% auto 7%;
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body header {
-    grid-area: header;
+body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+}
 
-    margin: 1%;
-    border: 6px solid rgba(0, 0, 0, 0.02);
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  margin: 10px 100px;
+  font-size: 1.2rem;
+}
+@media (max-width: 798px) {
+  .header {
+    padding: 1rem;
+    font-size: 1rem;
+    align-items: center;
+    margin: 0;
+  }
+}
+.header-brand {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Spoqa Han Sans Neo", sans-serif;
+  transition: 0.1s;
+}
+@media (max-width: 798px) {
+  .header-brand {
+    font-size: 1rem;
+  }
+}
+.header-brand:hover {
+  color: rgb(0, 0, 0);
+}
+.header-button {
+  width: 60px;
+  height: 60px;
+  background: url("../img/menu.png");
+  filter: invert(100%);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
 
-    display: flex;
+.menu ul {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  padding-left: 0px;
+  justify-content: space-evenly;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.menu ul li {
+  width: 20%;
+  text-align: center;
+  transition: 0.2s;
+}
+.menu ul li:hover {
+  letter-spacing: 2px;
+  background-color: black;
+}
+.menu ul li a {
+  display: block;
+  padding: 20px;
+  width: 100%;
+  line-height: 50px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.menu ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 798px) {
+  .menu ul li a {
+    font-size: 0.8rem;
+  }
+}
+
+.main .card {
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.main .card .card-body a {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+.main .card .card-body a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.main .card .card-body h5 {
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+.main .card .card-body p {
+  line-height: 50px;
+  font-weight: 500;
+}
+.main .card .card-body p span {
+  font-weight: 300;
+}
+
+.footer {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 10px 100px;
+  padding: 100px 40px;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
+}
+@media (max-width: 798px) {
+  .footer {
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+.footer ul {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+.footer ul li a {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
+  filter: invert(100%);
+}
+.footer ul li a:hover {
+  transform: scale(0.6) translateY(-15px);
+}
+.footer p {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  line-height: 50px;
+  transition: 1s;
+}
+.footer p a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer p a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
 }
 
-body header h1 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: black;
-}
-
-body nav {
-    grid-area: nav;
-
-    width: 10%;
-    height: 100%;
-    background-color: black;
-
-    position: fixed;
-    overflow: hidden;
-}
-
-body nav ul li a {
-    display: block;
-    padding: 20% 10%;
-    
-    color: white;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-nav :hover {
-    color:black;
-}
-
-nav ul li :hover {
-    background-color: white;
-    transition: 0.3s;
-}
-
-body main {
-    grid-area: main;
-
-    display: flex;
-    flex-direction: column;
-}
-
-body main section {
-    margin: 1%;
-
-    display: flex;
-    flex-direction: row;
-}
-
-
-
-
-
-footer {
-    grid-area: footer;
-    margin: 1%;
-}
-
-footer ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    border: 6px solid rgba(0, 0, 0, 0.02);
-}
-
-body footer ul li {
-    align-items: center;
-    padding: 1%;
-}
-
-footer ul li a {
-    color: black;
-}
-
-footer ul :hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-    color: white;
-    background-color: black;
-}
-
-.fa-brands {
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
-}
-
-.fa-basket-shopping {
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-    padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.001);
-    border-radius: 5%;
-}
+/*# sourceMappingURL=integrantes.css.map */

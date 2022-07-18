@@ -1,0 +1,140 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    font-family: 'Montserrat', sans-serif
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background-color: variables.$bg-color
+    color: variables.$text-color
+
+    a
+        text-decoration: none
+
+    ul
+        list-style: none
+
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+    font-size: 1.2rem
+
+    @include mixins.mobile
+        padding: 1rem
+        font-size: 1rem
+        align-items: center
+        margin: 0
+
+    &-brand // .header-brand
+        @include mixins.logo
+        @include mixins.mobile
+            font-size: 1rem
+
+        &:hover
+            color: variables.$color-2-1
+
+    &-button // .header-button
+        @include mixins.toggle
+
+.menu
+
+    ul
+        @include mixins.flex-center
+        padding-left: 0px
+        justify-content: space-evenly
+        border: 1px solid variables.$color-2-4
+
+        li
+            width: 20%
+            text-align: center
+            transition: .2s
+
+            &:hover
+                letter-spacing: 2px
+                background-color: black
+
+            a
+                display: block
+                padding: 20px
+                width: 100%
+                line-height: 50px
+                font-size: 1.2rem
+                font-weight: 400
+                text-transform: uppercase
+                color: variables.$text-color
+
+                &:hover
+                    color: variables.$color-1-1
+
+                @include mixins.mobile
+                    font-size: 0.8rem
+
+.main
+
+    .card
+        border: 1px solid variables.$color-2-4
+
+        .card-body
+
+            a
+                font-size: 1.2rem
+                padding: 10px
+
+                &:hover
+                    background-color: variables.$color-2-1
+                    color: variables.$color-1-1
+
+            h5
+                padding: 10px
+                font-size: 1.6rem
+                font-weight: 500
+                font-family: "Spoqa Han Sans Neo", "sans-serif"
+
+            p
+                line-height: 50px
+                font-weight: 500
+
+                span
+                    font-weight: 300
+
+.footer
+    @include mixins.flex-center
+    @include mixins.container
+    @include mixins.footer
+    margin: 0
+    margin-top: 30px
+    padding: 0
+    width: 100%
+    justify-content: space-around
+
+    @include mixins.mobile
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    ul
+        @include mixins.flex-center
+
+        li
+            a
+                @include mixins.footer--social-links
+
+                &:hover
+                    transform: scale(0.6) translateY(-15px)
+
+    p
+        color: variables.$color-2-3
+        font-weight: 400
+        line-height: 50px
+        transition: 1s
+
+        a
+            color: variables.$color-2-3
+
+            &:hover
+                color: variables.$color-2-1
+                font-weight: 600

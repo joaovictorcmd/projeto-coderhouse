@@ -1,0 +1,56 @@
+@use 'variables'
+
+@mixin container
+    padding: 1.5rem 0
+    margin: 10px 100px
+
+@mixin flex-center
+    display: flex
+    align-item: center
+    justify-content: center
+
+@mixin bg-img($img)
+    background-image: url('.../img/#{$img}')
+    background-size: 100%
+    background-position: center
+    background-repeat: no-repeat
+    filter: grayscale(100%)
+    transition: .6s
+
+@mixin logo
+    color: variables.$color-2-2
+    font-size: 2rem
+    font-weight: bold
+    font-family: 'Spoqa Han Sans Neo', sans-serif
+    transition: .1s
+
+@mixin toggle
+    width: 60px
+    height: 60px
+    background: url("../img/menu.png")
+    filter: invert(100%)
+    background-repeat: no-repeat
+    background-size: 30px
+    background-position: center
+    cursor: pointer
+
+@mixin footer
+    padding: 100px 40px
+    justify-content: space-between
+
+@mixin footer--social-links
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    margin-right: 20px
+    transform: scale(0.5)
+    transition: 0.5s
+    filter: invert(100%)
+
+@mixin border
+    border: .5px solid #ffffff
+    box-shadow: 0 0 8px #0000001a
+
+@mixin mobile
+    @media(max-width: 798px)
+        @content

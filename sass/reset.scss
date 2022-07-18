@@ -28,14 +28,14 @@ $color2: (
     text-transform: lowercase;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     text-decoration: none;
-    color: map-get($color-white, second);
+    color: map-get($color1, second);
     font-size: 1.8em;
 
     &:hover {
-        color: map-get($color-white, first);
+        color: map-get($color1, first);
     }
 
     &:active {
-        color: map-get($color-white, second);
+        color: map-get($color1, second);
     }
 }
